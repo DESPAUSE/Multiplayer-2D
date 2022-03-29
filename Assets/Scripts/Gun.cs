@@ -26,7 +26,7 @@ public class Gun : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1"))
         {
-            int dir = (render.flipX ? 1 : -1);
+            int dir = (render.flipX) ? -1 : 1;
             Vector2 pos = (render.flipX) ? transform.position - new Vector3(1, 0, 0) : transform.position;
 
             GameObject tmpBullet = PhotonNetwork.Instantiate(bullet.name, pos, transform.rotation);
